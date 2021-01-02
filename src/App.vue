@@ -258,7 +258,7 @@ main {
       font-weight: 700;
       padding: 0.5em;
       font-size: 120px;
-
+      margin-bottom: 0;
       text-align: center;
       border-radius: 16px;
       transition: 0.4s;
@@ -277,6 +277,9 @@ main {
       align-items: center;
       justify-content: center;
       margin-bottom: 0;
+      img{
+        margin-top: 35px;
+      }
       .desc {
         font-size: 24px;
       }
