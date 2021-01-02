@@ -44,7 +44,7 @@
             <p>{{ datas.weather[0].main }}</p>
             <img
               :src="
-                `http://openweathermap.org/img/wn/${datas.weather[0].icon}@2x.png`
+                `https://openweathermap.org/img/wn/${datas.weather[0].icon}@2x.png`
               "
               alt=""
             />
@@ -89,7 +89,7 @@ export default {
     },
     getData() {
       fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${this.selectedCity}&appid=${this.apiKey}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${this.selectedCity}&appid=${this.apiKey}&units=metric`
       )
         .then(this.handleErrors)
         .then((res) => res.json())
