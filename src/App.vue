@@ -8,9 +8,9 @@
       "
     >
       <div class="title">
-        <h1 :class="
+        <span :class="
         typeof datas.main != 'undefined' && datas.main.temp > 16 ? 'warm' : ''
-      ">Worldwide Weather App</h1>
+      ">Worldwide <br> Weather <br> App</span>
         <img
           src="https://media2.giphy.com/media/Ur1ePKk5h82J2nKUmm/giphy.gif"
           alt=""
@@ -184,9 +184,10 @@ main {
   .title{
     display: flex;
     padding: 2rem;
-    h1{
-      margin-top: 35px;
+    span{
+      margin: 20px 0;
       transition: .4s;
+      font-size: 32px;
       &.warm{
         color: #fff;
       }
@@ -201,7 +202,7 @@ main {
     }
   }
   .search-box {
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     width: 50%;
     .search-bar {
       font-size: 24px;
@@ -269,6 +270,12 @@ main {
       &:hover {
         transform: scale(1.2);
         cursor: pointer;
+      }
+      @media (max-width: 420px) and (min-width: 380px) {
+        font-size: 80px;
+      }
+      @media (max-width: 380px) {
+        font-size: 60px;
       }
     }
     .weather {
